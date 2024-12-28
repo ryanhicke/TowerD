@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/halo" width="262" height="121" contentBackgroundColor="#FAFAFA">
+	<fx:Script>
+		<![CDATA[
+			import Hicke.Ryan.Global;
+			import mx.managers.PopUpManager;
+			import Hicke.Ryan.Player;
+			public function BeginGame(diff:Number):void{
+				Player.difficulty = diff;
+				Global.BeginGame();
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</fx:Script>
+	<s:Panel x="0" y="0" width="263" height="122">
+		<s:Button x="9" y="51" click="BeginGame(.75);" label="Easy" fontFamily="Verdana"/>
+		<s:Button x="92" y="51" click="BeginGame(1.0);" label="Medium" fontFamily="Verdana"/>
+		<s:Button x="175" y="51" click="BeginGame(1.2);" label="Hard" fontFamily="Verdana"/>
+		<mx:Label x="41.5" y="10" text="Select Difficulty" fontSize="22" textAlign="center" fontFamily="Verdana"/>
+	</s:Panel>
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+</s:Group>

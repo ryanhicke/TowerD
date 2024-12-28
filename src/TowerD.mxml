@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/halo"
+	width="585" height="543" creationComplete="application1_creationCompleteHandler(event)"  preinitialize="application1_preinitializeHandler(event)">
+
+	<fx:Style>
+		@namespace mx "library://ns.adobe.com/flex/halo";
+		@namespace s "library://ns.adobe.com/flex/spark";
+		.border {
+			border-style:solid;
+			border-color: B5BCBC;
+			border-thickness:3px;
+		}
+		.red{
+			color:#ff0000;
+		}
+	</fx:Style>
+	<fx:Script source="towerD.as" />
+	<mx:Canvas verticalScrollPolicy="off" horizontalScrollPolicy="off" alpha="0.0"
+			label="" id="can" visible="false" width="100%" height="543" click="can_clickHandler(event)" x="0" y="0" fontFamily="Verdana">
+		<s:Panel x="-1" y="449" width="100%" height="95" contentBackgroundColor="#FAFAFA">				
+			<mx:Label x="163" y="-26" text="$ {Player.cash}" id="lblCash" fontFamily="Verdana"/>
+			<mx:Label x="413" y="-26" text="Score: {Player.score}" id="lblScore" fontFamily="Verdana"/>
+			<mx:Label x="275" y="-26" text="Lives: {Player.lives}" id="lblLives" fontFamily="Verdana"/>
+			<mx:Label  buttonMode="true" mouseChildren="false" useHandCursor="true"  x="9" y="-26" id="lblRaidTimer" click="lblRaidTimer_clickHandler(event)" mouseOver="lblRaidTimer_mouseOverHandler(event)" mouseOut="lblRaidTimer_mouseOutHandler(event)" fontFamily="Verdana"/>
+			<mx:Button x="0" y="0" label="Pause" click="button1_clickHandler(event)" alpha="1.0" height="59" fontSize="22" fontFamily="Verdana" width="96" fontWeight="normal" useHandCursor="true" id="btnPause"/>
+			<mx:HRule x="97" y="-1" width="201" height="1"/>
+			<mx:VRule x="96" y="0" width="1" height="58"/>
+			<mx:VRule x="297" y="0" width="1" height="58"/>
+			<mx:ViewStack x="297.8" y="-0.6" id="vwsInfo" width="288" height="66">
+				<mx:Canvas label="View 1" width="100%" height="100%">
+				</mx:Canvas>
+				<mx:Canvas label="TowerPurchase" width="100%" height="100%">
+					<mx:Label x="78" y="4" text="Name" fontFamily="Verdana" id="lblTwrBuyName" fontWeight="bold"/>
+					<mx:Label x="5" y="4" text="$ Cost" id="lblTwrBuyCost"/>
+					<mx:Label x="4" y="32" text="Speed:" id="lblTwrBuySpeed" fontFamily="Verdana"/>
+					<mx:Label x="95" y="32" text="Damage:" id="lblTwrBuyDmg" fontFamily="Verdana"/>
+					<mx:Label x="202.5" y="4" text="Effect" id="lblTwrBuyEffect" fontFamily="Verdana"/>
+					<mx:Label x="202.5" y="32" text="Range:" id="lblTwrBuyRange" fontFamily="Verdana"/>
+				</mx:Canvas>
+				<mx:Canvas label="TowerStats" width="100%" height="100%">
+					<mx:Label x="78" y="4" text="" fontFamily="Verdana" id="lblTwrUpgName" fontWeight="bold"/>
+					<mx:Label x="4" y="4" text="$ "  id="lblTwrUpgCost"/>
+					<mx:Label x="5" y="32" text="Speed: " id="lblTwrUpgSpeed" fontFamily="Verdana"/>
+					<mx:Label x="95" y="32" text="Damage: " id="lblTwrUpgDmg" fontFamily="Verdana"/>
+					<mx:Label x="199.5" y="4" text="" id="lblTwrUpgEffect" fontFamily="Verdana"/>
+					<mx:Label x="199.5" y="32" text="Range: " id="lblTwrUpgRange" fontFamily="Verdana"/>
+				</mx:Canvas>
+				<mx:Canvas label="CreepStats" width="100%" height="100%">
+					<mx:Label x="20" y="10" text="Name" id="lblCreepName" fontWeight="bold" fontFamily="Verdana"/>
+					<mx:Label x="100.5" y="11" text="HP" id="lblCreepHP" fontFamily="Verdana"/>
+					<mx:Label x="100.5" y="36" text="Speed" id="lblCreepSpeed" fontFamily="Verdana"/>
+					<mx:Label x="218" y="34" text="Points" id="lblCreepPoints" fontFamily="Verdana"/>
+					<mx:Label x="218" y="6" text="$Cash" id="lblCreepCash" fontFamily="Verdana"/>
+				</mx:Canvas>
+			</mx:ViewStack>
+			<mx:ViewStack x="96.8" y="-0.65" id="vwsBuy" width="201" height="62">
+				<mx:Canvas label="View 1" width="100%" height="100%">
+					<mx:Image x="9.5" y="30" id="btnTower1" click="image1_clickHandler(event)"  mouseOver="DrawOverlay(btnTower1);HoverTower(0);" mouseOut="KillOverlay(btnTower1);HoverTowerOut();" useHandCursor="true" buttonMode="true" mouseChildren="false"  width="20" height="20"/>
+					<mx:Image x="46.5" y="30" id="btnTower2" click="image2_clickHandler(event)"  mouseOver="DrawOverlay(btnTower2);HoverTower(1);" mouseOut="KillOverlay(btnTower2);HoverTowerOut();" useHandCursor="true" buttonMode="true" mouseChildren="false" width="20" height="20"/>
+					<mx:Image x="83.5" y="30" id="btnTower3" click="image3_clickHandler(event)"  mouseOver="DrawOverlay(btnTower3);HoverTower(2);" mouseOut="KillOverlay(btnTower3);HoverTowerOut();" useHandCursor="true" buttonMode="true" mouseChildren="false" width="20" height="20"/>
+					<mx:Image x="121" y="30" id="btnTower4" click="image4_clickHandler(event)"  mouseOver="DrawOverlay(btnTower4);HoverTower(3);" mouseOut="KillOverlay(btnTower4);HoverTowerOut();" useHandCursor="true" buttonMode="true" mouseChildren="false" width="20" height="20"/>
+					<mx:Image x="156.5" y="30" id="btnTower5" click="image5_clickHandler(event)"  mouseOver="DrawOverlay(btnTower5);HoverTower(4);" mouseOut="KillOverlay(btnTower5);HoverTowerOut();" buttonMode="true" mouseChildren="false" useHandCursor="true" width="20" height="20"/>
+					<mx:Label x="42" y="0" text="Buy Towers" fontFamily="Verdana" fontSize="19" fontWeight="normal"/>
+				</mx:Canvas>
+				<mx:Canvas label="canUpgrade" width="100%" height="100%">
+					<s:Button x="99" y="1" label="Upgrade" click="button2_clickHandler(event)" width="100" height="59" fontFamily="Verdana" fontSize="19" id="btnUpgrade"/>
+					<s:Button x="0" y="1" label="Sell" width="99" height="59" id="btnSell" fontFamily="Verdana" fontSize="19" click="btnSell_clickHandler(event)"/>
+				</mx:Canvas>
+			</mx:ViewStack>
+		</s:Panel>
+		<mx:Image x="0" y="0" width="585" height="450" id="imgBG" z="0"/>
+		
+		<mx:ViewStack id="vwsSound" x="553.8" y="449.4" width="30"  buttonMode="true" mouseChildren="false" useHandCursor="true" height="30"  click="imgSpk_clickHandler(event)" mouseOver="vwsGraphicsOver(vwsSound)" mouseOut="vwsGraphicsOut(vwsSound)">
+			<mx:Canvas label="View 1" width="100%" height="100%">
+				<mx:Image x="0" y="0" source="@Embed('../bin-debug/images/spk.png')" id="imgSpk"/>
+			</mx:Canvas>
+			<mx:Canvas label="View 2" width="100%" height="100%">
+				<mx:Image x="0" y="0" source="@Embed('../bin-debug/images/spkOff.png')" id="imgSpkOff"/>
+			</mx:Canvas>
+		</mx:ViewStack>
+	</mx:Canvas>
+	<mx:Image visible="false" x="0" y="0" width="585" height="543" alpha=".6" 
+		click="imgOverlayClick(event);" source="@Embed('../bin-debug/images/overlay.png')" id="imgOverlay" />
+	<mx:Image visible="false" x="276.5" y="235" source="@Embed('../bin-debug/images/pause.png')" id="imgPause" />
+	<mx:ProgressBar x="10" y="270" fontFamily="Verdana" fontWeight="bold" label="Loading Please Wait" fontSize="31" indeterminate="true" width="565" id="pgbLoading" labelPlacement="top"/>
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+</s:Application>
