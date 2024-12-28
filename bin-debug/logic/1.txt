@@ -1,0 +1,22 @@
+{
+	sounds:{
+				shoot:{
+					tower1:"sounds/laser1.mp3",
+					tower2:"sounds/laser2.mp3",
+					tower3:"sounds/laser3.mp3",
+					tower4:"sounds/laser4.mp3",
+					tower5:"sounds/laser5.mp3"},
+				die:{
+					die1:"sounds/death1.mp3",
+					die2:"sounds/death2.mp3",
+					die3:"sounds/death3.mp3",
+					die4:"sounds/death4.mp3"}
+			},
+	tower1:{name:"Tower A",shot:15,range:80,cost:175,img:"images/TowerA.png"},
+	tower2:{name:"Tower B",shot:10,range:50,cost:220,img:"images/TowerB.png"},
+	tower3:{name:"Tower C",shot:30,range:125,cost:270,img:"images/TowerC.png"},
+	tower4:{name:"Tower D",shot:15,range:80,cost:300,img:"images/TowerD.png"},
+	tower5:{name:"Tower E",shot:40,range:300,cost:350,img:"images/TowerE.png"},
+	bullet1:{speed:15,damage:13,effect:0,imgSrc:"images/Bullet.png"},
+	bullet2:{speed:10,damage:8,effect:1,imgSrc:"images/Bullet.png"},
+	bullet3:

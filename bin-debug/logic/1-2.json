@@ -1,0 +1,53 @@
+{
+	"title":"Development",
+	"sounds":{
+		"shoot":{
+			"tower1":"sounds/laser1.mp3",
+			"tower2":"sounds/laser2.mp3",
+			"tower3":"sounds/laser3.mp3",
+			"tower4":"sounds/laser4.mp3",
+			"tower5":"sounds/laser5.mp3"},
+		"die":{
+			"die1":"sounds/death1.mp3",
+			"die2":"sounds/death2.mp3",
+			"die3":"sounds/death3.mp3",
+			"die4":"sounds/death4.mp3"}
+	},
+	"tower1":{"name":"Tower A","effect":15,"range":80,"cost":175,"img":"images/TowerA.png"},
+	"tower2":{"name":"Tower B","effect":10,"range":50,"cost":220,"img":"images/TowerB.png"},
+	"tower3":{"name":"Tower C","effect":30,"range":125,"cost":270,"img":"images/TowerC.png"},
+	"tower4":{"name":"Tower D","effect":15,"range":80,"cost":300,"img":"images/TowerD.png"},
+	"tower5":{"name":"Tower E","effect":40,"range":300,"cost":350,"img":"images/TowerE.png"},
+	"bullet1":{"speed":15,"damage":13,"effect":0,"img":"images/Bullet.png"},
+	"bullet2":{"speed":10,"damage":8,"effect":1,"img":"images/Bullet.png"},
+	"bullet3":{"speed":30,"damage":20,"effect":2,"img":"images/Bullet.png"},
+	"bullet4":{"speed":15,"damage":10,"effect":3,"img":"images/Bullet.png"},
+	"bullet5":{"speed":12,"damage":11,"effect":0,"img":"images/Bullet.png"},
+	"creep1":{"name":"Creep 1","speed":1,"hp":30,"score":100,"cash":35,"img":"images/creep1.png"},
+	"creep2":{"name":"Creep 2","speed":6,"hp":15,"score":120,"cash":45,"img":"images/creep2.png"},
+	"creep3":{"name":"Creep 3","speed":3,"hp":50,"score":50,"cash":22,"img":"images/creep3.png"},
+	"creep4":{"name":"Creep 4","speed":4.5,"hp":33,"score":300,"cash":0,"img":"images/creep4.png"},
+	"creep5":{"name":"Creep 5","speed":2,"hp":120,"score":150,"cash":30,"img":"images/creep5.png"},
+	"creep6":{"name":"Creep 6","speed":4,"hp":30,"score":20,"cash":35,"img":"images/creep6.png"},
+	"creep7":{"name":"Creep 7","speed":4,"hp":30,"score":10,"cash":44,"img":"images/creep7.png"},
+	"creep8":{"name":"Creep 8","speed":4,"hp":30,"score":1,"cash":4,"img":"images/creep8.png"},
+	"raids":[
+		{	"time":1000,
+			"creeps":[{"x":0,"y":100,"type":0},{"x":0,"y":100,"type":1},{"x":0,"y":100,"type":0},{"x":0,"y":100,"type":4},{"x":0,"y":100,"type":0}]
+		},
+		{	"time":15000,
+			"creeps":[{"x":0,"y":100,"type":7},{"x":0,"y":100,"type":1},{"x":0,"y":100,"type":0},{"x":0,"y":100,"type":4},{"x":0,"y":100,"type":0}]
+		},
+		{	"time":17000,
+			"creeps":[{"x":0,"y":100,"type":4},{"x":0,"y":100,"type":1},{"x":0,"y":100,"type":2},{"x":0,"y":100,"type":4},{"x":0,"y":100,"type":1}]
+		},
+		{	"time":13000,
+			"creeps":[{"x":0,"y":100,"type":0},{"x":0,"y":100,"type":1},{"x":0,"y":100,"type":6},{"x":0,"y":100,"type":5},{"x":0,"y":100,"type":6}]
+		},
+		{	"time":5000,
+			"creeps":[{"x":0,"y":100,"type":0},{"x":0,"y":100,"type":1},{"x":0,"y":100,"type":7},{"x":0,"y":100,"type":3},{"x":0,"y":100,"type":6}]
+		},
+	],
+	"roadImg":"images/Road.png",
+	"bgImg":"images/bg.png"
+}

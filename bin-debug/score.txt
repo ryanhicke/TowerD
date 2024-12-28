@@ -1,0 +1,7 @@
+{"scores":[
+	{"name":"eefwefefwe","score":500},
+	{"name":"sdfsdfef","score":400},
+	{"name":"fefsdf","score":300},
+	{"name":"rgrgerg","score":200},
+	{"name":"fgfd","score":100}]
+}
